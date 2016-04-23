@@ -16,10 +16,14 @@
 Academic achievement is commonly measured by examinations or continuous assessment but there is no general agreement on how it is best tested or which aspects are most important — procedural knowledge such as skills or declarative knowledge such as facts.</em>
         </div>
 
-        <div>
+        {% for post in posts %}
+            <div>
+              <p>published: {{ post.published_date }}</p>
+              <h1><a href="">{{ post.title }}</a></h1>
+              <p>{{ post.text|linebreaks }}</p>
+            </div>
 
-            <h2><a href="">Post #2</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+        {% endfor %}
+        
     </body>
 </html
